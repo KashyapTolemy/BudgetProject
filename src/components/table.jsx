@@ -1,9 +1,17 @@
 import React from "react";
 import Body from "./body";
-// import expenseRs from "./body";
-export default function Table({expenseRs,setexpenseRs,expenseAmount,setexpenseAmount}){
-    // const expensereason =Body().props.children.props.expenseRs;
+export default function Table({expenseItemList,expenseAmountList,timeList}){
+    const itemList = []
+    for(let i=0; i<expenseItemList.length; i++){
+        itemList.push({
+            item: expenseItemList[i],
+            amount: expenseAmountList[i],
+            time: timeList[i]
+        })
+    }
+    console.log(itemList)
     return(
+
         <div className="table1">
             <table>
                 <thead>
@@ -14,11 +22,15 @@ export default function Table({expenseRs,setexpenseRs,expenseAmount,setexpenseAm
                     </tr>
                 </thead>
             <tbody>
-                <tr>
-                    <td data-label="Account">{expenseRs}</td>
-                    <td data-label="Amount">${expenseAmount}</td>
-                    <td data-label="Due Date">04/01/2016</td>
-                </tr>
+                    {itemList.map((val, index) => {
+                        return(
+                            <tr>
+                                <td data-label="Item">{val.item}</td>
+                                <td data-label="Amount"><span className="expenseminus">-${val.amount}</span></td>
+                                <td data-label="Due Date">{val.time}</td>
+                            </tr>
+                        )
+                    })}
             </tbody>
             </table>
         </div>

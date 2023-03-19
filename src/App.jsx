@@ -6,26 +6,28 @@ import Title from './components/title'
 import Body from "./components/body"
 import Table from "./components/table"
 export default function App(){
-  const [expenseRs,setexpenseRs]=useState(0);
-  const [expenseAmount,setexpenseAmount]=useState(0);
+  const [expenseItemList,setExpenseItemList]=useState([]);
+  const [expenseAmountList,setExpenseAmountList]=useState([]);
+  const [timeList, setTimeList] = useState([]);
     return (
       <div className ="bg">
         <div className="app">
             <div className="titleh"><Title /></div>
             <div className="balanceh">
               <Body
-                expenseRs ={expenseRs}
-                setexpenseRs ={setexpenseRs}
-                expenseAmount={expenseAmount}
-                setexpenseAmount ={setexpenseAmount}
+                expenseItemList ={expenseItemList}
+                setExpenseItemList ={setExpenseItemList}
+                expenseAmountList={expenseAmountList}
+                setExpenseAmountList ={setExpenseAmountList}
+                timeList={timeList}
+                setTimeList ={setTimeList}
               />
             </div>
             <div className="listh">
               <Table 
-              expenseRs ={expenseRs}
-              setexpenseRs ={setexpenseRs}
-              expenseAmount={expenseAmount}
-              setexpenseAmount ={setexpenseAmount}
+              expenseItemList ={expenseItemList}
+              expenseAmountList={expenseAmountList}
+              timeList={timeList}
               />
             </div>
         </div>
