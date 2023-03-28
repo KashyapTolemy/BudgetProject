@@ -1,6 +1,6 @@
-# Budget Website
+# Finance Tracking Website
 
-This is a simple budget website built using React. It allows users to keep track of their expenses and provides representations of their financial data through table
+This is a simple finance website built using React. It allows users to keep track of their expenses and provides representations of their financial data through table
 
 ## Features
 
