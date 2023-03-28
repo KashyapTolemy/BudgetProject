@@ -1,4 +1,4 @@
-# Finance Tracking Website
+# Finance Tracking App
 
 This is a simple finance website built using React. It allows users to keep track of their expenses and provides representations of their financial data through table
 
